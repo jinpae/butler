@@ -43,3 +43,5 @@ group :development, :test do
   gem 'spring'
 end
 
+# Use devise to manage users
+gem 'devise'
