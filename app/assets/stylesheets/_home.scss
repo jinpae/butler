@@ -4,7 +4,73 @@
 
 @import "colors";
 
+// --------------------------------------
+// HERO
+// --------------------------------------
 main {
-	h1 {
+	text-align: center;
+	background-color: #faf9f6;
+	padding: 3.5rem 0;
+
+	.title {
+		color: $primary-color;
+		margin: 0;
+		letter-spacing: 0.05rem;
+
+	}
+	
+	.subtitle {
+		font-size: 1.3rem;
+		font-weight: 300;
+		letter-spacing: 0.03rem;
+		margin: 0.3em 0 2.5em 0;
+		line-height: 1.5em;
+		color: $darker-gray;
+	}
+
+	@media (min-width: 400px) {
+		.title {
+			font-size: 48px;
+		}
+
+		.subtitle {
+			font-size: 1.25rem;
+		}
+	}
+
+	@media (min-width: 600px) {
+		.title {
+			font-size: 52px;
+		}
+
+		.subtitle {
+			font-size: 1.3rem;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.title {
+			font-size: 60px;
+		}
+
+		.subtitle {
+			font-size: 1.4rem;
+		}
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		color: $primary-color;
+		border: 2px solid $primary-color;
+		border-radius: 5px;
+		padding: 1em 1.5em;
+		font-size: 1.2rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $primary-color;
+			color: white;
+		}
 	}
 }
