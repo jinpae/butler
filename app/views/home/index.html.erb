@@ -1,7 +1,20 @@
 <main id="hero" role="main">
 	<div class="container">
 		<h1 class="title">Your Trusted Task Manager</h1>
-		<p class="subtitle">Butler is a simple yet beatifully crafted web application that helps you <br>to keep track of all your important tasks fast and easy.</p>
+		<p class="subtitle">Butler is a simple yet beatifully crafted web application that helps<br>to keep track of all your important tasks fast and easy.</p>
 		<%= link_to 'Get Started!', new_user_registration_path, class: "btn btn-primary" %>
 	</div>
 </main>
+
+<section id="first-section">
+	<div class="container">
+		<div class="col-1-3 img-wrap">
+			<%= image_tag('clipboard.png', alt: 'Clipboard') %>
+		</div>
+
+		<div class="col-2-3">
+			<h2 class="section-title">Create and manage your task lists</h2>
+			<p class="section-description">No more forgetting what to do and what to buy at a grocery store. You can <strong>create</strong> and <strong>manage</strong> multiple todo lists each for separate purposes. <em>You are in good hands with your faithful butler.</em></p>
+		</div>
+	</div>
+</section>
