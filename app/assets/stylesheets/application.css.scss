@@ -15,7 +15,22 @@
 
 @import "bourbon";
 @import "normalize";
+@import "colors";
 @import "home";
+
+%clearfix {
+	zoom: 1;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
 
 * {
 	box-sizing: border-box;
@@ -23,6 +38,12 @@
 
 body {
 	font-family: 'Open-sans', $helvetica;
+	color: $default-text-color;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 @media (min-width: 768px) {
@@ -40,5 +61,38 @@ body {
 @media (min-width: 1200px) {
 	.container {
 		width: 1170px;
+	}
+}
+
+// --------------------------------------
+// HEADER
+// --------------------------------------
+header {
+	@extend %clearfix;
+	
+	padding: 1rem 0;
+
+	a {
+		text-decoration: none;
+		color: $default-text-color;
+	}
+
+	.navbar-brand {
+		float: left;
+		font-size: 28px;
+		font-weight: 700;
+	}
+
+	nav {
+		float: right;
+		padding: 0.5em 0;
+
+		a {
+			margin-left: 20px;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
 	}
 }
