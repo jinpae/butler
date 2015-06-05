@@ -79,21 +79,45 @@ main {
 
 
 // --------------------------------------
-// SECTION 1
+// FEATURES
 // --------------------------------------
-#first-section {
+.text-left {
+	.col-1-3,
+	.col-2-3 {
+		float: right;
+	}
+
+	.col-1-3 {
+		text-align: right;
+	}
+}
+
+.text-right {
+	.col-1-3,
+	.col-2-3 {
+		float: left;
+	}
+}
+
+.feature {
 	@extend %clearfix;
 
 	padding: 3.5rem 0;
 	
 	strong {
 		font-weight: 400;
+		color: $primary-color;
+	}
+
+	.container {
+		padding-right: 5rem;
+		padding-left: 5rem;
 	}
 
 	.section-title {
 		font-size: 2rem;
 		font-weight: 500;
-		padding-top: 2rem;
+		padding-top: 1.6rem;
 	}
 
 	.section-description {
@@ -104,22 +128,18 @@ main {
 		color: $lighter-gray;
 	}
 
-	.col-1-3,
-	.col-2-3 {
-		float: right;
-	}
-
-	.img-wrap {
-		text-align: center;
+	.col-1-3 {
+		min-width: 200px;
 
 		img {
-			width: 60%;
-			min-width: 140px;
+			width: 90%;
+			min-width: 160px;
 		}
 	}
 
 	@media (max-width: 992px) {
 		text-align: center;
+		padding: 2.5rem 0;
 
 		.section-title {
 			padding-top: 1rem;
@@ -132,6 +152,17 @@ main {
 
 		.col-2-3 {
 			width: 100%;
+		}
+
+		.col-1-3 {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.container {
+			padding-right: 24px;
+			padding-left: 24px;
 		}
 	}
 }
