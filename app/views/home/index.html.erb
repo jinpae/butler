@@ -1,8 +1,14 @@
 <main id="hero" role="main">
 	<div class="container">
-		<h1 class="title">Your Trusted Task Manager</h1>
-		<p class="subtitle">Butler is a simple yet beatifully crafted web application that helps<br>to keep track of all your important tasks fast and easy.</p>
-		<%= link_to 'Get Started!', new_user_registration_path, class: "btn btn-primary" %>
+		<h1 class="title">
+			Your Trusted Task Manager
+		</h1>
+
+		<p class="subtitle">
+			Butler is a simple yet beatifully crafted web application that helps<br>to keep track of all your important tasks fast and easy.
+		</p>
+
+		<%= link_to 'Get Started!', new_user_registration_path, class: "btn btn-lg btn-primary" %>
 	</div>
 </main>
 
@@ -13,8 +19,13 @@
 		</div>
 
 		<div class="col-2-3">
-			<h2 class="section-title">Create and manage your task lists</h2>
-			<p class="section-description">No more forgetting what to do and what to buy at a grocery store. You can <strong>create</strong> and <strong>manage</strong> multiple todo lists each for separate purposes. <em>You are in good hands with your faithful butler.</em></p>
+			<h2 class="section-title">
+				Create and manage your task lists
+			</h2>
+
+			<p class="section-description">
+				No more forgetting what to do and what to buy at a grocery store. You can <strong>create</strong> and <strong>manage</strong> multiple todo lists each for separate purposes. <em>You are in good hands with your faithful butler.</em>
+			</p>
 		</div>
 	</div>
 </section>
@@ -26,8 +37,27 @@
 		</div>
 
 		<div class="col-2-3">
-			<h2 class="section-title">User friendly interface and design</h2>
-			<p class="section-description">With <strong>simple</strong>, <strong>intuitive</strong>, and <strong>clean</strong> design, there is no unnecessary distraction or time spent. Butler's easy-to-use interface will help you to focus on getting things done and track your progress.</p>
+			<h2 class="section-title">
+				User friendly interface and design
+			</h2>
+
+			<p class="section-description">
+				With <strong>simple</strong>, <strong>intuitive</strong>, and <strong>clean</strong> design, there is no unnecessary distraction or time spent. Butler's easy-to-use interface will help you to focus on getting things done and track your progress.
+			</p>
 		</div>
+	</div>
+</section>
+
+<section class="sign-up">
+	<div class="container">
+		<h2 class="section-title">
+			Access your tasks from anywhere at anytime
+		</h2>
+
+		<p class="section-description">
+			With Butler web application, you can manage and access<br>your todo list on any web-enabled device.
+		</p>
+
+		<%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-lg btn-secondary' %>
 	</div>
 </section>
