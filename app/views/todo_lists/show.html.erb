@@ -12,7 +12,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @todo_list.user %>
+  <%= @todo_list.user.first_name %>
 </p>
 
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
