@@ -2,5 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).on "ready page:load", ->
+$(document).on "page:change", ->
 	$('.title').fitText(1, { minFontSize: '44px', maxFontSize: '60px' })
