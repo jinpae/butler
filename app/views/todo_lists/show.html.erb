@@ -15,5 +15,9 @@
   <%= @todo_list.user.first_name %>
 </p>
 
+<%= render @todo_list.todo_items %>
+
+<%= render 'todo_items/form' %>
+
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
 <%= link_to 'Back', todo_lists_path %>
