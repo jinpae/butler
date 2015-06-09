@@ -7,6 +7,12 @@
 		</ul>
 	<% end %>
 
-	<%= f.text_field :content, placeholder: 'Enter new todo item' %>
-	<%= f.submit %>
+	<% if @todo_item.new_record? %>
+		<%= f.text_field :content, required: true, placeholder: 'Enter new todo item' %>
+		<%= f.submit "Create" %>
+	<% else %>
+		<%= f.label :content %>
+		<%= f.text_field :content, autofocus: true, required: true, onFocus: 'this.select();' %>
+		<%= f.submit "Update" %>
+	<% end %>
 <% end %>

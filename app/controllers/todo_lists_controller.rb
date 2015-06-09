@@ -11,7 +11,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
-		@todo_item = @todo_list.todo_items.new
+		@todo_item = TodoItem.new
   end
 
   # GET /todo_lists/new
@@ -71,6 +71,6 @@ class TodoListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_list_params
-      params.require(:todo_list).permit(:title, :description, :user_id)
+      params.require(:todo_list).permit(:title, :description)
     end
 end
