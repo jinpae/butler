@@ -14,5 +14,6 @@
 		<%= f.label :content %>
 		<%= f.text_field :content, autofocus: true, required: true, onFocus: 'this.select();' %>
 		<%= f.submit "Update" %>
+		<%= link_to "Cancel", @todo_list %>
 	<% end %>
 <% end %>
