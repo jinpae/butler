@@ -7,7 +7,7 @@ class TodoItemsController < ApplicationController
 		@todo_item = @todo_list.todo_items.new(todo_item_params)
 
 		if @todo_item.save
-			redirect_to @todo_list, notice: "New todo item has been created successfully!"
+			redirect_to @todo_list, notice: "New todo item has been created successfully."
 		else
 			render "todo_lists/show"
 		end
@@ -18,7 +18,7 @@ class TodoItemsController < ApplicationController
 
 	def update
 		if @todo_item.update(todo_item_params)
-			redirect_to @todo_list, notice: "Todo item has been updated successfully!"
+			redirect_to @todo_list, notice: "Todo item has been updated successfully."
 		else
 			render :edit
 		end
@@ -27,6 +27,12 @@ class TodoItemsController < ApplicationController
 	def destroy
 		@todo_item.destroy
 
+		redirect_to @todo_list
+	end
+
+	def complete
+		@todo_item.toggle_complete_status
+		
 		redirect_to @todo_list
 	end
 
