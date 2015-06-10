@@ -1,11 +1,15 @@
-<%= profile_image_for(@user, 'gravatar') %>
-
-<p><%= @user.full_name %></p>
-<p><%= @user.email %></p>
-
-<p><%= pluralize(@user.todo_lists.size, 'todo list') %></p>
-<p><%= pluralize(@user.get_total_num_todo_items, 'todo item') %></p>
-<p><%= pluralize(@user.get_total_num_completed_items, 'completed todo item') %></p>
-
-<%= link_to 'Edit profile', edit_user_registration_path %> |
-<%= link_to 'View todo lists', todo_lists_path %>
+<section class="page-wrap">
+	<div class="container">
+		<%= profile_image_for(@user, 'gravatar') %>
+		
+		<p><%= @user.full_name %></p>
+		<p><%= @user.email %></p>
+		
+		<p><%= pluralize(@user.todo_lists.size, 'todo list') %></p>
+		<p><%= pluralize(@user.get_total_num_todo_items, 'todo item') %></p>
+		<p><%= pluralize(@user.get_total_num_completed_items, 'completed todo item') %></p>
+		
+		<%= link_to 'Edit profile', edit_user_registration_path %> |
+		<%= link_to 'View todo lists', todo_lists_path %>
+	</div>
+</section>

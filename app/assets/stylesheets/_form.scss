@@ -1,0 +1,72 @@
+@import "colors";
+
+.form-wrap {
+	max-width: 600px;
+	margin: 0 auto;
+
+	#error_explanation {
+		h2 {
+			font-weight: 400;
+		}
+
+		margin: 1.5em 0 2.5em 0;
+	}
+
+	.field_with_errors {
+		display: inline-block;
+		color: $pink;
+		width: 100%;
+
+		input[type] {
+			border: 1px solid $pink;
+		}
+	}
+
+	.actions {
+		margin-bottom: 1.6em;
+	}
+
+	span {
+		font-size: .85em;
+		font-weight: 200;
+		color: $gray2;
+	}
+
+	label {
+		letter-spacing: .01em;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="textarea"] {
+		width: 100%;
+		outline: none;
+		padding: .6em;
+		border-radius: .3em;
+		border: 1px solid $gray3;
+		margin: .3em 0 1.8em 0;
+		color: $gray1;
+		font-weight: 300;
+		letter-spacing: .02em;
+	}
+
+	input[type="submit"] {
+		border-style: none;
+		color: white;
+		background-color: $primary-color;
+
+		&:hover {
+			background-color: darken($primary-color, 10%);
+		}
+	}
+
+	a {
+		color: $gray1;
+		line-height: 1.4;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}

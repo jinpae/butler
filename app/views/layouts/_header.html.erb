@@ -1,4 +1,4 @@
-<header role="banner">
+<%= content_tag :header, role: "banner", class: home_page? ? nil : "border-enabled-header" do %>
 	<div class="container">
 		<%= link_to 'Butler', root_path, class: 'navbar-brand' %>
 
@@ -12,4 +12,4 @@
 			<% end %>
 		</nav>
 	</div>
-</header>
+<% end %>
