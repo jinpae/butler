@@ -45,7 +45,7 @@ Rails.application.configure do
 		port: '587',
 		address: 'smpt.mandrillapp.com',
 		user_name: Rails.application.secrets.mandrill_username,
-		password: Rails.application.secrets.mandrill_password,
+		password: Rails.application.secrets.mandrill_apikey,
 		domain: 'example.com',
 		authentication: :plain,
 		enable_starttls_auto: true
