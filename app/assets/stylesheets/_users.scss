@@ -1,0 +1,72 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gravatar {
+	border-radius: 50%;
+}
+
+#user-profile-section {
+	text-align: center;
+
+	hr {
+		width: 10%;
+		height: 0px;
+		border: 0;
+		border-top: 2px solid $opaque-white;
+		margin: 0px auto 0px;
+	}
+
+	.user-name {
+		font-weight: 600;
+		font-size: 2em;
+		margin: .4em 0 0 0;
+		letter-spacing: .02em;
+	}
+
+	.user-email {
+		font-weight: 200;
+		color: $gray2;
+		margin-top: 0;
+		margin-bottom: 3.5em;
+		letter-spacing: .05em;
+	}
+
+	.col-1-3 {
+		font-size: 4rem;
+		border-bottom: 5px solid;
+		width: 30%;
+		margin: 0 1.5% 1.5em 1.5%;
+
+		p {
+			margin-top: .7em;
+		}
+	}
+
+	.todo-lists-col {
+		color: $primary-color;
+	}
+
+	.todo-items-col {
+		color: $blue;
+	}
+
+	.completed-items-col {
+		color: $pink;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.col-1-3 {
+			width: 100%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	a {
+		font-size: 1.3em;
+		font-weight: 300;
+		margin: 0 1em;
+	}
+}
