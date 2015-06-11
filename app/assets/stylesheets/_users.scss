@@ -57,11 +57,16 @@
 
 	.links {
 		font-size: 1.3em;
-		font-weight: 300;
-	}
+		font-weight: 400;
 
-	a {
-		margin: 0 1em;
+		.fa {
+			padding: 0px .5em 0px 0px;
+		}
+
+		a {
+			margin: 0 1em;
+			text-decoration: none;
+		}
 	}
 
 	@media only screen and (max-width: 1200px) {
@@ -82,7 +87,11 @@
 			font-size: 1.1rem;
 
 			a {
-				margin: 0 .5em;
+				margin: .8em 0;
+				display: block;
+				border: 1px solid;
+				border-radius: .3em;
+				padding: 1em;
 			}
 		}
 	}
