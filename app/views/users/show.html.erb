@@ -15,7 +15,9 @@
 			<p><%= @user.get_total_num_completed_items %><br /><span>completed</span></p>
 		</div>
 		
-		<%= link_to 'Edit profile', edit_user_registration_path %> |
-		<%= link_to 'View todo lists', todo_lists_path %>
+		<div class="links">
+			<%= link_to 'Edit profile', edit_user_registration_path %> |
+			<%= link_to 'View todo lists', todo_lists_path %>
+		</div>
 	</div>
 </section>

@@ -55,6 +55,15 @@
 		color: $pink;
 	}
 
+	.links {
+		font-size: 1.3em;
+		font-weight: 300;
+	}
+
+	a {
+		margin: 0 1em;
+	}
+
 	@media only screen and (max-width: 1200px) {
 		.col-1-3 {
 			width: 100%;
@@ -64,9 +73,17 @@
 		}
 	}
 
-	a {
-		font-size: 1.3em;
-		font-weight: 300;
-		margin: 0 1em;
+	@media only screen and (max-width: 400px) {
+		.col-1-3 {
+			font-size: 48px;
+		}
+
+		.links {
+			font-size: 1.1rem;
+
+			a {
+				margin: 0 .5em;
+			}
+		}
 	}
 }

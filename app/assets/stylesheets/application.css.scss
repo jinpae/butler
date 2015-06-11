@@ -58,7 +58,7 @@ html {
 }
 
 body {
-	font-family: 'Open-sans', $helvetica;
+	font-family: 'Open Sans', $helvetica;
 	color: $default-text-color;
 	@include display(flex);
 	@include flex-direction(column);
