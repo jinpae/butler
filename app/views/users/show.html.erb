@@ -10,9 +10,9 @@
 		<div class="col-1-3 todo-lists-col">
 			<p><%= @user.todo_lists.size %><br /><span><%= pluralize_without_count(@user.todo_lists.size, 'todo list') %></span></p>
 		</div><div class="col-1-3 todo-items-col">
-			<p><%= @user.get_total_num_todo_items %><br /><span><%= pluralize_without_count(@user.get_total_num_todo_items, 'todo item') %></span></p>
+			<p><%= @user.todo_items %><br /><span><%= pluralize_without_count(@user.todo_items, 'todo item') %></span></p>
 		</div><div class="col-1-3 completed-items-col">
-			<p><%= @user.get_total_num_completed_items %><br /><span>completed</span></p>
+			<p><%= @user.completed_items %><br /><span>completed</span></p>
 		</div>
 		
 		<div class="links">

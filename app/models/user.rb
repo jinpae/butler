@@ -10,24 +10,24 @@ class User < ActiveRecord::Base
 		@full_name ||= "#{first_name} #{last_name}"
 	end
 
-	def get_total_num_todo_items
-		sum = 0
+	def todo_items
+		@todo_items = 0
 
 		todo_lists.each do |todo_list|
-			sum += todo_list.todo_items.size
+			@todo_items += todo_list.todo_items.size
 		end
 
-		sum
+		@todo_items
 	end
 
-	def get_total_num_completed_items
-		sum = 0
+	def completed_items
+		@completed_items = 0
 
 		todo_lists.each do |todo_list|
-			sum += todo_list.todo_items.where.not(completed_at: nil).size
+			@completed_items += todo_list.todo_items.where.not(completed_at: nil).size
 		end
 
-		sum
+		@completed_items
 	end
 
 	def gravatar_id
