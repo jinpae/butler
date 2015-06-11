@@ -199,13 +199,16 @@ header {
 
 	.navbar-brand {
 		float: left;
-		font-size: 28px;
+		//font-size: 28px;
+		font-size: 1.75em;
 		font-weight: 700;
 	}
 
 	nav {
 		float: right;
-		line-height: 34px;
+		//line-height: 34px;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
 
 		a {
 			margin-left: 20px;
