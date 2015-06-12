@@ -1,19 +1,21 @@
-<p id="notice"><%= notice %></p>
+<section id="todo-items-section" class="page-wrap">
+	<div class="container">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
+		<h1 class="page-title todo-list-title">
+			<%= @todo_list.title %>
+		</h1>
+		<p class="todo-list-description">
+		  <%= @todo_list.description %>
+		</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
-</p>
+		<div class="todo-items-wrap">
+			<%= render @todo_list.todo_items %>
+			<%= render 'todo_items/form' %>
 
-<%= render @todo_list.todo_items %>
-
-<%= render 'todo_items/form' %>
-
-<%= link_to 'Back', todo_lists_path %> |
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: 'Are you sure?' } %>
+			<%= link_to 'Back', todo_lists_path %> |
+			<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
+			<%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: 'Are you sure?' } %>
+		</div>
+	</div>
+</section>

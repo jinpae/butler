@@ -1,0 +1,165 @@
+// Place all the styles related to the todo_lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#todo-items-section {
+	a {
+		text-decoration: none;
+	}
+
+	.todo-items-wrap {
+		max-width: 960px;
+		margin: 0 auto;
+
+		.form-wrap {
+			max-width: 100%;
+			margin: 2em 0;
+
+			input[type="submit"] {
+				display: none;
+			}
+		}
+	}
+
+	.todo-list-title {
+		margin: 0;
+		font-size: 3em;
+		font-weight: 800;
+	}
+	
+	.todo-list-description {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 3rem;
+		font-size: 1.1em;
+		color: $gray1;
+	}
+
+	.todo-item-row {
+		@extend %clearfix;
+		margin-top: .6em;
+		margin-bottom: .6em;
+		font-size: 1.6em;
+
+		.todo-item-checkbox,
+		.todo-item,
+		.todo-item-actions {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.todo-item-checkbox {
+			text-align: center;
+			cursor: pointer;
+			margin: 0 .7em 0 0;
+			float: left;
+			@include size(1.6em);
+			@include transition(all .4s ease-in-out);
+
+			.fa {
+				font-size: 1.6em;
+			}
+		}
+
+		.todo-item-checkbox.complete {
+			color: $gray3;
+			
+			&:hover {
+				color: $primary-color;
+			}
+		}
+
+		.todo-item-checkbox.incomplete {
+			border: 2px solid;
+			border-radius: .3em;
+			color: $gray2;
+
+			&:hover {
+				color: $primary-color;
+			}
+
+			.fa {
+				display: none;
+			}
+		}
+
+		.todo-item {
+			max-width: 80%;
+			font-size: .8em;
+
+			.todo-item-content {
+				margin: 0;
+			}
+
+			.complete {
+				color: $gray3;
+			}
+		}
+
+		.actions-wrap {
+			float: right;
+
+			.todo-item-actions {
+				border-radius: .3em;
+				text-align: center;
+				cursor: pointer;
+				@include size(1.6em);
+				@include transition(all .4s ease-in-out);
+
+				.fa {
+					color: white;
+					display: inline-block;
+					line-height: 1.6em;
+				}
+			}
+
+			.edit {
+				background-color: $blue;
+
+				&:hover {
+					background-color: darken($blue, 15%);
+				}
+			}
+
+			.delete {
+				background-color: $pink;
+
+				&:hover {
+					background-color: darken($pink, 15%);
+				}
+			}
+		}
+
+		@media only screen and (max-width: 992px) {
+			font-size: 20px;
+
+			.todo-item {
+				max-width: 76%;
+			}
+		}
+
+		@media only screen and (max-width: 544px) {
+			.todo-item {
+				max-width: 72%;
+			}
+		}
+
+		@media only screen and (max-width: 475px) {
+			.todo-item {
+				max-width: 66%;
+			}
+		}
+
+		@media only screen and (max-width: 414px) {
+			font-size: 18px;
+		}
+
+		@media only screen and (max-width: 320px) {
+			.font-size: 16px;
+
+			.todo-item {
+				max-width: 60%;
+			}
+		}
+	}
+}

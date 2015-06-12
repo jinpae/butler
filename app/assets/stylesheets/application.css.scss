@@ -21,6 +21,7 @@
 @import "home";
 @import "form";
 @import "users";
+@import "todo_lists";
 
 // --------------------------------------
 // PLACE HOLDERS
@@ -138,7 +139,7 @@ a {
 	cursor: pointer;
 	padding: 1em;
 	letter-spacing: .01em;
-	@include transition(all .3s ease-in-out);
+	@include transition(all .4s ease-in-out);
 }
 
 .btn-lg {
@@ -180,7 +181,7 @@ a {
 
 .page-wrap {
 	@extend %clearfix;
-	padding: 3em 0 6em 0;
+	padding: 2em 0 6em 0;
 }
 
 

@@ -12,4 +12,8 @@ class TodoItem < ActiveRecord::Base
 
 		self.save!
 	end
+
+	def completed?
+		completed_at.present?
+	end
 end

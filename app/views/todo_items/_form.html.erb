@@ -10,7 +10,7 @@
 	
 		<% if @todo_item.new_record? %>
 			<%= f.text_field :content, required: true, placeholder: 'Enter new todo item' %>
-			<%= f.submit "Create" %>
+			<%= f.submit "Create todo item", class: "btn" %>
 		<% else %>
 			<%= f.label :content %>
 			<%= f.text_field :content, autofocus: true, required: true, onFocus: 'this.select();' %>
