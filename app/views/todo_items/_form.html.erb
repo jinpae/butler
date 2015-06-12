@@ -1,19 +1,21 @@
-<%= form_for([@todo_list, @todo_item]) do |f| %>
-	<% if @todo_item.errors.any? %>
-		<ul>
-			<% @todo_item.errors.full_messages.each do |message| %>
-				<li><%= message %></li>
-			<% end %>
-		</ul>
+<div class="form-wrap">
+	<%= form_for([@todo_list, @todo_item]) do |f| %>
+		<% if @todo_item.errors.any? %>
+			<ul>
+				<% @todo_item.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	
+		<% if @todo_item.new_record? %>
+			<%= f.text_field :content, required: true, placeholder: 'Enter new todo item' %>
+			<%= f.submit "Create" %>
+		<% else %>
+			<%= f.label :content %>
+			<%= f.text_field :content, autofocus: true, required: true, onFocus: 'this.select();' %>
+			<%= f.submit "Update todo item", class: "btn" %>
+			<%= link_to "Cancel", @todo_list, class: "margin-left" %>
+		<% end %>
 	<% end %>
-
-	<% if @todo_item.new_record? %>
-		<%= f.text_field :content, required: true, placeholder: 'Enter new todo item' %>
-		<%= f.submit "Create" %>
-	<% else %>
-		<%= f.label :content %>
-		<%= f.text_field :content, autofocus: true, required: true, onFocus: 'this.select();' %>
-		<%= f.submit "Update" %>
-		<%= link_to "Cancel", @todo_list %>
-	<% end %>
-<% end %>
+</div>

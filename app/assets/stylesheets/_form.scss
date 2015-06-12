@@ -39,7 +39,7 @@
 	input[type="text"],
 	input[type="email"],
 	input[type="password"],
-	input[type="textarea"] {
+	textarea {
 		width: 100%;
 		outline: none;
 		padding: .6em;
@@ -49,6 +49,10 @@
 		color: $gray1;
 		font-weight: 300;
 		letter-spacing: .02em;
+	}
+
+	textarea {
+		resize: none;
 	}
 
 	input[type="submit"] {
