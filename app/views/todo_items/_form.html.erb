@@ -13,7 +13,7 @@
 			<%= f.submit "Create todo item", class: "btn" %>
 		<% else %>
 			<%= f.label :content %>
-			<%= f.text_field :content, autofocus: true, required: true, onFocus: 'this.select();' %>
+			<%= f.text_field :content, autofocus: true, required: true %>
 			<%= f.submit "Update todo item", class: "btn" %>
 			<%= link_to "Cancel", @todo_list, class: "margin-left" %>
 		<% end %>
