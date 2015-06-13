@@ -1,27 +1,31 @@
-<p id="notice"><%= notice %></p>
+<section id="todo-lists-section" class="page-wrap" >
+		<p id="notice"><%= notice %></p>
+		
+		<% @todo_lists.each do |todo_list| %>
+			<div class="todo-list-wrap">
+				<div class="container">
+					<h1 class="todo-list-title">
+						<%= link_to todo_list.title, todo_list %>
+					</h1>
 
-<h1>Listing Todo Lists</h1>
+					<p class="todo-list-description">
+						<%= todo_list.description %>
+					</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
+					<p class="todo-items-info">
+						<i class="fa fa-check-square-o"></i> <%= todo_items_info_for(todo_list) %>
+					</p>
+				</div>
+			</div>
 
-  <tbody>
-    <% @todo_lists.each do |todo_list| %>
-      <tr>
-        <td><%= todo_list.title %></td>
-        <td><%= todo_list.description %></td>
-        <td><%= link_to 'Show', todo_list %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+			<hr>
+		<% end %>
 
-<br>
-
-<%= link_to 'New todo list', new_todo_list_path %>
+		<div class="container">
+			<div class="links text-center">
+				<%= link_to new_todo_list_path do %>
+					<i class="fa fa-rocket"></i> Create new todo list
+				<% end %>
+			</div>
+		</div>
+</section>
