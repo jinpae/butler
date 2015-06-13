@@ -88,6 +88,10 @@ a {
 	margin-left: 1.2em;
 }
 
+.text-center {
+	text-align: center;
+}
+
 
 // --------------------------------------
 // GRID
@@ -130,7 +134,7 @@ a {
 
 
 // --------------------------------------
-// BUTTONS
+// BUTTONS AND LINKS
 // --------------------------------------
 .btn {
 	display: inline-block;
@@ -166,6 +170,30 @@ a {
 	&:hover {
 		background-color: $opaque-white;
 		color: $primary-color;
+	}
+}
+
+.links {
+	font-size: 1.3em;
+	font-weight: 400;
+
+	a {
+		margin: 0 .5em;
+		text-decoration: none;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.links {
+		font-size: 1.1rem;
+
+		a {
+			margin: .8em 0;
+			display: block;
+			border: 1px solid;
+			border-radius: .3em;
+			padding: 1em;
+		}
 	}
 }
 

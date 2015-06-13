@@ -1,8 +1,14 @@
-<div class="todo-item-row">
-	<%= link_to_toggle_status @todo_list, todo_item, 'todo-item-checkbox' %>
+<% if todo_item.completed? %>
+	<div class="todo-item-row complete">
+<% else %>
+	<div class="todo-item-row incomplete">
+<% end %>
+	<%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item), method: :patch, class: 'todo-item-checkbox' do %>
+		<i class="fa fa-check"></i>
+	<% end %>
 
 	<div class="todo-item">
-		<%= style_content todo_item, 'todo-item-content' %>
+		<p class="todo-item-content"><%= todo_item.content %></p>
 	</div>
 	
 	<div class="actions-wrap">
