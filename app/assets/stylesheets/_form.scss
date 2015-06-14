@@ -18,7 +18,7 @@
 		width: 100%;
 
 		input[type] {
-			border: 1px solid $pink;
+			border-color: $pink;
 		}
 	}
 
@@ -44,7 +44,6 @@
 		outline: none;
 		padding: .6em;
 		border-radius: .3em;
-		border: 1px solid $gray3;
 		margin: .3em 0 1.8em 0;
 		color: $gray1;
 		font-weight: 300;
@@ -62,6 +61,15 @@
 
 		&:hover {
 			background-color: darken($primary-color, 10%);
+		}
+	}
+
+	input,
+	textarea {
+		border: 2px solid $gray3;
+
+		&:focus {
+			border-color: $primary-color;
 		}
 	}
 
