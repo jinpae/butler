@@ -34,11 +34,34 @@
 		height: 0;
 		border: 0;
 		border-top: 1px solid $gray3;
+		margin: 0;
 	}
 
 	.todo-list-wrap {
 		text-align: center;
-		padding: 2.5em 0;
+		padding: 3em 0;
+		position: relative;
+		overflow: hidden;
+
+		.corner-ribbon {
+			position: absolute;
+			background-color: $primary-color;
+			left: auto;
+			right: -80px;
+			top: 50px;
+			padding: .8em;
+			box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+			letter-spacing: .05em;
+			width: 300px;
+			@include transform(rotate(45deg));
+
+			p {
+				margin: 0;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: $opaque-white;
+			}
+		}
 	}
 
 	.todo-list-title {

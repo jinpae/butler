@@ -3,6 +3,11 @@
 		
 		<% @todo_lists.each do |todo_list| %>
 			<div class="todo-list-wrap">
+				<div class="corner-ribbon">
+					<p class="corner-ribbon-content">
+						Complete
+					</p>
+				</div>
 				<div class="container">
 					<h1 class="todo-list-title">
 						<%= link_to todo_list.title, todo_list %>
