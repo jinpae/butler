@@ -1,6 +1,4 @@
 <section id="todo-lists-section" class="page-wrap" >
-		<p id="notice"><%= notice %></p>
-		
 		<% @todo_lists.each do |todo_list| %>
 			<%= content_tag :div, class: todo_list.completed? ? "todo-list-wrap todo-list-complete" : "todo-list-wrap" do -%>
 				<div class="corner-ribbon">
