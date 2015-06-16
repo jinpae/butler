@@ -4,3 +4,6 @@
 
 $(document).on "page:change", ->
 	$('.title').fitText(1, { minFontSize: '44px', maxFontSize: '60px' })
+
+	$('.navbar-toggle').on 'click', ->
+		$('nav ul').toggleClass 'navbar-collapse-toggle'

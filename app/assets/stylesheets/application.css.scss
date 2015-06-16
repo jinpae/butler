@@ -276,12 +276,55 @@ header {
 		padding-top: .5rem;
 		padding-bottom: .5rem;
 
-		a {
-			margin-left: 20px;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			@include transition(max-height .4s ease-in-out);
+			
+			li {
+				display: inline-block;
 
-			&:hover {
-				color: $primary-color;
+				a {
+					margin-left: 20px;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
 			}
+		}
+	}
+
+	.navbar-toggle {
+		float: right;
+		font-size: 1.75em;
+		display: none;
+	}
+
+	@media only screen and (max-width: 500px) {
+		padding-bottom: 0;
+		
+		nav {
+			width: 100%;
+
+			ul {
+				max-height: 0;
+
+				li {
+					width: 100%;
+					padding: 1em 0;
+				}
+			}
+		}
+
+		.navbar-collapse-toggle {
+			max-height: 11.125em;
+		}
+
+		.navbar-toggle {
+			display: block;
 		}
 	}
 }

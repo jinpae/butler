@@ -1,16 +1,21 @@
 <%= content_tag :header, role: "banner", class: home_page? ? nil : "border-enabled-header" do %>
 	<div class="container">
 		<%= link_to 'Butler', root_path, class: 'navbar-brand' %>
+		<a href="#" class="navbar-toggle">
+			<i class="fa fa-bars"></i>
+		</a>
 
 		<nav>
-			<% if current_user %>
-				<%= link_to 'Todo lists', todo_lists_path %>
-				<%= link_to 'Profile', current_user %>
-				<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-			<% else %>
-				<%= link_to 'Sign up', new_user_registration_path %>
-				<%= link_to 'Sign in', new_user_session_path %>
-			<% end %>
+			<ul>
+				<% if current_user %>
+					<li><%= link_to 'Todo lists', todo_lists_path %></li>
+					<li><%= link_to 'Profile', current_user %></li>
+					<li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to 'Sign up', new_user_registration_path %></li>
+					<li><%= link_to 'Sign in', new_user_session_path %></li>
+				<% end %>
+			</ul>
 		</nav>
 	</div>
 <% end %>
