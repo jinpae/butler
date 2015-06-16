@@ -8,8 +8,11 @@
 		</p>
 
 		<div class="todo-items-wrap">
-			<%= render @todo_list.todo_items %>
-			<%= render 'todo_items/form' %>
+			<div id="todo-list">
+				<%= render @todo_list.todo_items %>
+			</div>
+
+			<%= render 'todo_items/new_todo_item_form' %>
 
 			<div class="links text-center">
 				<%= link_to todo_lists_path do %>

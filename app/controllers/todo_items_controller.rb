@@ -7,8 +7,12 @@ class TodoItemsController < ApplicationController
 		@todo_item = @todo_list.todo_items.new(todo_item_params)
 
 		if @todo_item.save
-			redirect_to @todo_list
+			respond_to do |format|
+				format.html { redirect_to @todo_list }
+				format.js
+			end
 		else
+			set_todo_list
 			render "todo_lists/show"
 		end
 	end
@@ -27,13 +31,19 @@ class TodoItemsController < ApplicationController
 	def destroy
 		@todo_item.destroy
 
-		redirect_to @todo_list
+		respond_to do |format|
+			format.html { redirect_to @todo_list }
+			format.js
+		end
 	end
 
 	def complete
 		@todo_item.toggle_complete_status
-		
-		redirect_to @todo_list
+
+		respond_to do |format|
+			format.html { redirect_to @todo_list }
+			format.js
+		end
 	end
 
 	private

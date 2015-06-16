@@ -1,21 +1,19 @@
 <div class="form-wrap">
 	<%= form_for([@todo_list, @todo_item]) do |f| %>
 		<% if @todo_item.errors.any? %>
-			<ul>
-				<% @todo_item.errors.full_messages.each do |message| %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@todo_item.errors.count, "error") %> prohibited this todo item from being saved:</h2>
+	      <ul>
+					<% @todo_item.errors.full_messages.each do |message| %>
+	      	  <li><%= message %></li>
+	      	<% end %>
+	      </ul>
+	    </div>
 		<% end %>
 	
-		<% if @todo_item.new_record? %>
-			<%= f.text_field :content, required: true, placeholder: 'Enter new todo item' %>
-			<%= f.submit "Create todo item", class: "btn" %>
-		<% else %>
-			<%= f.label :content %>
-			<%= f.text_field :content, autofocus: true, required: true %>
-			<%= f.submit "Update todo item", class: "btn" %>
-			<%= link_to "Cancel", @todo_list, class: "margin-left" %>
-		<% end %>
+		<%= f.label :content %>
+		<%= f.text_field :content, autofocus: true, required: true %>
+		<%= f.submit "Update todo item", class: "btn" %>
+		<%= link_to "Cancel", @todo_list, class: "margin-left" %>
 	<% end %>
 </div>
