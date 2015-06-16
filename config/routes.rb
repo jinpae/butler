@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 		resources :todo_items do
 			patch :complete, on: :member
 		end
+
+		patch :toggle_completed_items, on: :member
 	end
 
 	devise_scope :user do

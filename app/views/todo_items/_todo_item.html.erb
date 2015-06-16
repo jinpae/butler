@@ -1,4 +1,4 @@
-<%= content_tag :div, id: dom_id(todo_item), class: "todo-item-row #{todo_item.completed? ? 'complete' : 'incomplete'}" do %>
+<%= content_tag_for todo_item, 'todo-item-row' do %>
 	<%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item), remote: true, method: :patch, class: 'todo-item-checkbox' do %>
 		<i class="fa fa-check"></i>
 	<% end %>

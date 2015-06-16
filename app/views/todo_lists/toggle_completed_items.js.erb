@@ -1,0 +1,9 @@
+<% if @todo_list.hide_completed_items? %>
+	$('.complete').css('display', 'none');
+
+	$('#toggle-completed-items-btn').text('Show completed <%= pluralize_without_count @todo_list.completed_todo_items.size, 'item' %> (<%= @todo_list.completed_todo_items.size %>)');
+<% else %>
+	$('.complete').css('display', 'block');
+
+	$('#toggle-completed-items-btn').text('Hide completed items');
+<% end %>

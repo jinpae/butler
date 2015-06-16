@@ -1,6 +1,6 @@
 class TodoListsController < ApplicationController
 	before_action :authenticate_user!
-  before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo_list, only: [:show, :edit, :update, :destroy, :toggle_completed_items]
 
   # GET /todo_lists
   # GET /todo_lists.json
@@ -63,6 +63,15 @@ class TodoListsController < ApplicationController
     end
   end
 
+	def toggle_completed_items
+		@todo_list.toggle_hide_completed_items
+
+		respond_to do |format|
+			format.html { redirect_to @todo_list }
+			format.js
+		end
+	end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_todo_list
@@ -71,6 +80,6 @@ class TodoListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_list_params
-      params.require(:todo_list).permit(:title, :description)
+      params.require(:todo_list).permit(:title, :description, :hide_completed_items)
     end
 end
