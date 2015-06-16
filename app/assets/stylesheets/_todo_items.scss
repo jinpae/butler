@@ -11,6 +11,14 @@
 		max-width: 960px;
 		margin: 0 auto;
 
+		.toggle-completed-items-btn-wrap {
+			text-align: right;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
 		.form-wrap {
 			max-width: 100%;
 			margin: 2.5rem 0 4rem 0;
