@@ -11,12 +11,13 @@ class User < ActiveRecord::Base
 	validates :last_name, presence: true
 	validates :username,
 		presence: true,
-		format: /\A[A-Z0-9]+\z/i,
+		length: { minimum: 6 },
+		format: /\A([A-Z0-9]+[-_]*[A-Z0-9])+\z/i,
 		uniqueness: {
 			case_sensitive: false
 		}
 	
-	friendly_id :username, use: [:slugged, :finders, :history]
+	friendly_id :username, use: [:slugged, :finders]
 
 	def should_generate_new_friendly_id?
 		new_record? || username_changed?

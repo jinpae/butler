@@ -48,11 +48,11 @@ class TodoItemsController < ApplicationController
 
 	private
 		def set_todo_list
-			@todo_list = current_user.todo_lists.find(params[:todo_list_id])
+			@todo_list = current_user.todo_lists.friendly.find(params[:todo_list_id])
 		end
 
 		def set_todo_item
-			@todo_item = @todo_list.todo_items.find(params[:id])
+			@todo_item = @todo_list.todo_items.friendly.find(params[:id])
 		end
 
 		def todo_item_params

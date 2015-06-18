@@ -6,7 +6,7 @@ class TodoList < ActiveRecord::Base
 
 	validates :title, presence: true
 
-	friendly_id :title, use: [:slugged, :finders, :history]
+	friendly_id :title, use: [:slugged, :finders]
 
 	def should_generate_new_friendly_id?
 		new_record? || title_changed?
