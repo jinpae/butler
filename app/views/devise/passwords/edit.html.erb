@@ -14,7 +14,7 @@
 			    <% if @minimum_password_length %>
 						<span><em>(<%= @minimum_password_length %> characters minimum)</em></span>
 			    <% end %><br />
-			    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+			    <%= f.password_field :password, autofocus: true, autocomplete: "off", required: true %>
 			  </div>
 			
 			  <div class="field">
