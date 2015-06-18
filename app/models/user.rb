@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	extend FriendlyId
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -15,7 +16,11 @@ class User < ActiveRecord::Base
 			case_sensitive: false
 		}
 	
-	to_param :username
+	friendly_id :username, use: [:slugged, :finders, :history]
+
+	def should_generate_new_friendly_id?
+		new_record? || username_changed?
+	end
 
 	def full_name
 		@full_name ||= "#{first_name} #{last_name}"

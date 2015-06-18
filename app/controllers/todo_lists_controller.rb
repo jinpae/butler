@@ -12,6 +12,10 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1.json
   def show
 		@todo_item = TodoItem.new
+
+		if request.path != todo_list_path(@todo_list)
+			redirect_to @todo_list, status: :moved_permanently
+		end
   end
 
   # GET /todo_lists/new
@@ -75,7 +79,7 @@ class TodoListsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_todo_list
-      @todo_list = current_user.todo_lists.find(params[:id])
+      @todo_list = current_user.todo_lists.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

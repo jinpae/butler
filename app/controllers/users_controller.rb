@@ -3,5 +3,9 @@ class UsersController < ApplicationController
 
   def show
 		@user = current_user
+
+		if request.path != user_path(@user)
+			redirect_to @user, status: :moved_permanently
+		end
   end
 end

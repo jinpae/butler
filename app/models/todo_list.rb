@@ -1,8 +1,16 @@
 class TodoList < ActiveRecord::Base
+	extend FriendlyId
+
   belongs_to :user
 	has_many :todo_items, dependent: :destroy
 
 	validates :title, presence: true
+
+	friendly_id :title, use: [:slugged, :finders, :history]
+
+	def should_generate_new_friendly_id?
+		new_record? || title_changed?
+	end
 
 	def completed_todo_items
 		@completed_todo_items ||= todo_items.where.not(completed_at: nil)
