@@ -80,7 +80,7 @@
 			float: right;
 
 			.todo-item-actions {
-				border-radius: .3em;
+				border-radius: 50%;
 				text-align: center;
 				cursor: pointer;
 				@include size(1.6em);
@@ -170,7 +170,7 @@
 	.incomplete {
 		.todo-item-checkbox {
 			border: 2px solid;
-			border-radius: .3em;
+			border-radius: 50%;
 			color: $gray2;
 
 			&:hover {
