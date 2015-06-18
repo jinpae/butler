@@ -4,10 +4,18 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-	has_many :todo_lists
+	has_many :todo_lists, dependent: :destroy
 
 	validates :first_name, presence: true
 	validates :last_name, presence: true
+	validates :username,
+		presence: true,
+		format: /\A[A-Z0-9]+\z/i,
+		uniqueness: {
+			case_sensitive: false
+		}
+	
+	to_param :username
 
 	def full_name
 		@full_name ||= "#{first_name} #{last_name}"
