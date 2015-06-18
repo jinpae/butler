@@ -10,30 +10,30 @@
 			
 			  <div class="field">
 			    <%= f.label :first_name %><br />
-			    <%= f.text_field :first_name, autofocus: true %>
+			    <%= f.text_field :first_name, autofocus: true, required: true %>
 			  </div>
 			
 			  <div class="field">
 			    <%= f.label :last_name %><br />
-			    <%= f.text_field :last_name %>
+			    <%= f.text_field :last_name, required: true %>
 			  </div>
 
 			  <div class="field">
 			    <%= f.label :username %><br />
-			    <%= f.text_field :username %>
+			    <%= f.text_field :username, required: true %>
 			  </div>
 			
 			  <div class="field">
 			    <%= f.label :email %><br />
-			    <%= f.email_field :email %>
+			    <%= f.email_field :email, required: true %>
 			  </div>
 			
 			  <div class="field">
-			    <%= f.label :password %>
+			    <%= f.label :password, required: true %>
 			    <% if @minimum_password_length %>
 						<span><em>(<%= @minimum_password_length %> characters minimum)</em></span>
 			    <% end %><br />
-			    <%= f.password_field :password, autocomplete: "off" %>
+			    <%= f.password_field :password, autocomplete: "off", required: true %>
 			  </div>
 			
 			  <div class="field">

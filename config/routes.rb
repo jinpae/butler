@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	root 'home#index'
+
   resources :todo_lists do
 		resources :todo_items do
 			patch :complete, on: :member
@@ -18,6 +20,4 @@ Rails.application.routes.draw do
 	}
 
 	resources :users, only: [:show]
-
-	root 'home#index'
 end
