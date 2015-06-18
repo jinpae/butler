@@ -1,6 +1,8 @@
+<% title 'New Todo List' %>
+
 <section class="page-wrap">
 	<div class="container">
-		<h1 class="page-title">New Todo List</h1>
+		<h1 class="page-title"><%= yield :title %></h1>
 		
 		<%= render 'form' %>
 	</div>

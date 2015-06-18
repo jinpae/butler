@@ -1,6 +1,8 @@
+<% title 'Sign In' %>
+
 <section class="page-wrap">
 	<div class="container">
-		<h1 class="page-title">Sign In</h1>
+		<h1 class="page-title"><%= yield :title %></h1>
 		
 		<div class="form-wrap">
 			<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

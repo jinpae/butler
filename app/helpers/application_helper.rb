@@ -6,4 +6,8 @@ module ApplicationHelper
 	def home_page?
 		@result ||= (controller_name == 'home') && (action_name == 'index')
 	end
+
+	def title(page_title)
+		content_for :title, page_title.to_s
+	end
 end
