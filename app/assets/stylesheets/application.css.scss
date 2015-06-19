@@ -94,6 +94,14 @@ a {
 	text-align: center;
 }
 
+.md-text {
+	font-size: 1.6em;
+}
+
+.float-right {
+	float: right;
+}
+
 .primary-background {
 	background-color: $primary-color;
 	color: $opaque-white;
@@ -172,6 +180,31 @@ a {
 	width: 66.6%;
 }
 
+.grid {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.item-row {
+	margin-top: .6em;
+	margin-bottom: .6em;
+	font-size: 1.6em;
+
+	@media only screen and (max-width: 600px) {
+		font-size: 20px;
+	}
+
+	@media only screen and (max-width: 320px) {
+		font-size: 16px;
+	}
+}
+
+.item-content {
+	font-size: .8em;
+	display: inline-block;
+	margin: 0;
+}
+
 
 // --------------------------------------
 // BUTTONS AND LINKS
@@ -237,6 +270,29 @@ a {
 	}
 }
 
+.item-action-btn {
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	@include size(1.6em);
+	@include transition(all .4s ease-in-out);
+
+	.fa {
+		color: white;
+		display: inline-block;
+		line-height: 1.6em;
+	}
+}
+
+.delete {
+	background-color: $pink;
+
+	&:hover {
+		background-color: darken($pink, 15%);
+	}
+}
+
 
 // --------------------------------------
 // PAGES
@@ -245,6 +301,13 @@ a {
 	text-align: center;
 	font-weight: 600;
 	letter-spacing: .02em;
+}
+
+.lg-title {
+	font-size: 3em;
+	font-weight: 800;
+	letter-spacing: 0;
+	margin-top: 0;
 }
 
 .page-wrap {
@@ -327,7 +390,7 @@ header {
 		}
 
 		.navbar-collapse-toggle {
-			max-height: 11.125em;
+			max-height: 14.5em;
 		}
 
 		.navbar-toggle {

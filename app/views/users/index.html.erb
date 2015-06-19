@@ -1,0 +1,13 @@
+<% title "#{pluralize_without_count(User.count, 'User')} (#{User.count})" %>
+
+<section class="page-wrap">
+	<div class="container">
+		<h1 class="page-title lg-title">
+			<%= yield :title %>
+		</h1>
+
+		<ol class="grid">
+			<%= render @users %>
+		</ol>
+	</div>
+</section>

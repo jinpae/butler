@@ -27,5 +27,7 @@ Rails.application.routes.draw do
 		delete 'users' => 'registrations#destroy', as: ''
 	end
 
+	get 'users' => 'users#index', as: 'users'
+	delete 'users/:id' => 'users#destroy', as: 'destroy_user'
 	resources :users, path: '', only: [:show]
 end

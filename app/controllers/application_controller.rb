@@ -15,4 +15,10 @@ class ApplicationController < ActionController::Base
 			devise_parameter_sanitizer.for(:account_update) << :last_name
 			devise_parameter_sanitizer.for(:account_update) << :username
 		end
+
+		def require_admin
+			unless current_user.admin?
+				redirect_to root_url, alert: "Access denied!"
+			end
+		end
 end

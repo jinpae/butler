@@ -1,0 +1,13 @@
+<li class="item-row">
+	<div class="user-wrap">
+		<%= content_tag :p, class: "item-content #{user.admin? ? 'admin-user' : nil}" do %>
+			<%= "#{user.full_name} (@#{user.username})" %>
+		<% end %>
+
+		<div class="float-right">
+			<%= link_to destroy_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: "item-action-btn delete" do %>
+				<i class="fa fa-trash"></i>
+			<% end %>
+		</div>
+	</div>
+</li>

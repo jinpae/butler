@@ -48,7 +48,7 @@
 		font-size: 1.6em;
 
 		.todo-item-checkbox,
-		.todo-item,
+		.todo-item-content-wrap,
 		.todo-item-actions {
 			display: inline-block;
 			vertical-align: middle;
@@ -67,7 +67,7 @@
 			}
 		}
 
-		.todo-item {
+		.todo-item-content-wrap {
 			max-width: 80%;
 			font-size: .8em;
 
@@ -109,19 +109,19 @@
 		@media only screen and (max-width: 992px) {
 			font-size: 20px;
 
-			.todo-item {
+			.todo-item-content-wrap {
 				max-width: 76%;
 			}
 		}
 
 		@media only screen and (max-width: 544px) {
-			.todo-item {
+			.todo-item-content-wrap {
 				max-width: 72%;
 			}
 		}
 
 		@media only screen and (max-width: 475px) {
-			.todo-item {
+			.todo-item-content-wrap {
 				max-width: 65%;
 			}
 		}
@@ -131,9 +131,9 @@
 		}
 
 		@media only screen and (max-width: 320px) {
-			.font-size: 16px;
+			font-size: 16px;
 
-			.todo-item {
+			.todo-item-content-wrap {
 				max-width: 60%;
 			}
 		}
