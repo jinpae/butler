@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	before_action :require_admin, except: [:show]
 
 	def index
-		@users = User.all
+		@users = User.all.order(:id)
 	end
 
   def show
