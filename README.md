@@ -1,4 +1,4 @@
-## Butler
+# Butler
 A simple and beautiful todo list web application built with Ruby on Rails 4.
 
 Check out the [live demo](http://butlerproject.herokuapp.com/)!
@@ -8,7 +8,7 @@ The main idea behind Butler was to create a "Hello World" like rather simple web
 
 ## Project Details and Workflow
 ### 1. Planning Phase
-Started out with general planning phase where I tried to gather as much ideas as possible on what I wanted to achieve, as well as what is involved and needs to be done in order to do meet the goals. This involved things like gathering requirements, looking up some reference sites, coming up with rough class diagrams etc..  For this, I used [Trello](trello.com) to help me keep things organized and track the progress.
+Started out with general planning phase where I tried to gather as much ideas as possible on what I wanted to achieve, as well as what is involved and needs to be done in order to do meet the goals. This involved things like gathering requirements, looking up some reference sites, coming up with rough class diagrams etc..  For this, I used [Trello](https://trello.com) to help me keep things organized and track the progress.
 
 ### 2. Design Phase
 Once I came up with the deliverables and goals for the project, I moved to design phase, breaking things down to userflow diagrams, low, mid, and high fidelity wireframes, upto creating some core pages mock ups in Photoshop to get the overall look and feel and color schemes down. For this project, I decided to go with the flat design minimalistic look, keeping things simple and concise as much as possible.
